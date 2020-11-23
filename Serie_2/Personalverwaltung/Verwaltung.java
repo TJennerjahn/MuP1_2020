@@ -32,9 +32,9 @@ public class Verwaltung {
 
 	public double berechnePersonalkosten() {
 		double sum = 0.0;
-		for(int i = 0; i < this.mitarbeiter.length; i++) {
+		for(int i = 0; i < mitarbeiter.length; i++) {
 			if(mitarbeiter[i] != null) {
-				sum += this.mitarbeiter[i].berechneVerdienst();
+				sum += mitarbeiter[i].berechneVerdienst();
 			}
 		}
 		return sum;
