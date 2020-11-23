@@ -18,24 +18,22 @@ public class Marktanteil {
 	public Marktanteil naechsterTag(double bleibBeiA, double bleibBeiB) {
 		int switchToB = 0;
 		int switchToA = 0;
-		int currentA = getKaeuferVonA();
-		int currentB = getKaeuferVonB();
-		for(int i = 0; i < currentA; i++) {
+		for(int i = 0; i < kaeuferVonA; i++) {
 			if(Math.random() > bleibBeiA) {
 				switchToB++;
 			}
 		}
-		for(int i = 0; i < currentB; i++) {
+		for(int i = 0; i < kaeuferVonB; i++) {
 			if(Math.random() > bleibBeiB) {
 				switchToA++;
 			}
 		}
-		return new Marktanteil(currentA - switchToB + switchToA, currentB - switchToA + switchToB);
+		return new Marktanteil(kaeuferVonA - switchToB + switchToA, kaeuferVonB - switchToA + switchToB);
 	}
 	
 	public String toString() {
-		int kaeuferSum = getKaeuferVonA() + getKaeuferVonB();
-		String result = "Marktanteil Käufer Produkt A: " + getKaeuferVonA() + " (" + Math.round(getKaeuferVonA() / kaeuferSum) + "%) " + "Käufer Produkt B: " + getKaeuferVonB() + " (" + Math.round(getKaeuferVonB() / kaeuferSum) + "%)";
+		int kaeuferSum = kaeuferVonA + kaeuferVonB;
+		String result = "Marktanteil Käufer Produkt A: " + kaeuferVonA + " (" + Math.round(kaeuferVonA / kaeuferSum) + "%) " + "Käufer Produkt B: " + kaeuferVonB + " (" + Math.round(kaeuferVonB / kaeuferSum) + "%)";
 		return result;
 	}
 
