@@ -39,7 +39,7 @@ public class Gericht implements Comparable<Gericht> {
                 return true;
         }
 
-        @Override
+        //@Override
         public int compareTo(Gericht vergleichsobjekt) {
                 if(vergleichsobjekt.getPreis() == this.getPreis()) {return 0;}
                 return vergleichsobjekt.getPreis() > this.getPreis() ? -1 : 1;    
