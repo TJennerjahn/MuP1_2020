@@ -28,6 +28,7 @@ public class Arbeiter extends Mitarbeiter {
 		return stundenlohn * geleisteteStunden;
 	}
 
+	@Override
 	public String toString() {
 		return getName() + " Stundenlohn: " + String.format("%.2f", stundenlohn) + " Euro geleistete Stunden: " + geleisteteStunden; 
 	}

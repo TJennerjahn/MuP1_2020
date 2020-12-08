@@ -18,6 +18,7 @@ public class Angestellter extends Mitarbeiter {
 		return gehalt;
 	}
 
+	@Override
 	public String toString() {
 		return getName() + " Gehalt: " + String.format("%.2f", getGehalt()) + " Euro"; 
 	}

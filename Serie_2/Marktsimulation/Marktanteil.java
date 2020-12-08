@@ -31,6 +31,7 @@ public class Marktanteil {
 		return new Marktanteil(kaeuferVonA - switchToB + switchToA, kaeuferVonB - switchToA + switchToB);
 	}
 	
+	@Override
 	public String toString() {
 		int kaeuferSum = kaeuferVonA + kaeuferVonB;
 		String result = "Marktanteil Käufer Produkt A: " + kaeuferVonA + " (" + Math.round(kaeuferVonA / kaeuferSum) + "%) " + "Käufer Produkt B: " + kaeuferVonB + " (" + Math.round(kaeuferVonB / kaeuferSum) + "%)";
