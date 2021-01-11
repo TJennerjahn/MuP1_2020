@@ -2,7 +2,7 @@ public class Main {
 	public static void main(String[] args) {
 		BuchstabenStat stat = new BuchstabenStat();
 		try {
-			stat.analysiere("Faust.txt");
+			stat.analysiere("PrideAndPrejudice.txt");
 		}	catch(FalscherDateitypException e) {
 			System.err.println(e.getMessage());
 			return;
@@ -11,6 +11,7 @@ public class Main {
 			return;
 		}
 		stat.zeigeTop10();
-		stat.schreibeStatistik("Faust2Stat.txt");
+		stat.schreibeStatistik("2PrideAndPrejudice.txt");
 	}
 }
+

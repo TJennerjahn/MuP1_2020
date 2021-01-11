@@ -64,6 +64,7 @@ public class BuchstabenStat {
 		Map<Character, Integer> sorted = buchstabenHaeufigkeiten.entrySet()
 			.stream()
 			.sorted(comparingByValue(Comparator.reverseOrder()))
+			.limit(10)
 			.collect(toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
 
 		for(Map.Entry<Character, Integer> entry: sorted.entrySet()) {
